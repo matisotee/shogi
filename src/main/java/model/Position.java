@@ -1,6 +1,7 @@
 package model;
 
 import exceptions.backendExceptions.PositionCreationInvalidException;
+import exceptions.backendExceptions.PositionStatusUndefinedException;
 
 public class Position {
 
@@ -21,6 +22,31 @@ public class Position {
 
     public void setPiece(Piece piece) {
         this.piece = piece;
+        status = PositionStatus.FULL;
+    }
+
+    public Piece getPiece() {
+        return piece;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public boolean isFull() throws Exception{
+        if(status.equals(PositionStatus.EMPTY)){
+            return false;
+        }else if (status.equals(PositionStatus.FULL)){
+            return true;
+        }else{
+            throw new PositionStatusUndefinedException();
+        }
+
+
     }
 
     public static void checkIfValidPosition(int row, int column) throws Exception{

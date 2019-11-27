@@ -1,7 +1,6 @@
 package model;
 
 import dtos.DTOPlayer;
-import exceptions.backendExceptions.NoPlayerException;
 import exceptions.backendExceptions.SamePlayerException;
 import exceptions.userExceptions.PlayerColorException;
 
@@ -34,6 +33,15 @@ public class Player {
         }
     }
 
+    public ArrayList<Piece> getInactivePieces(){
+        ArrayList<Piece> inactivePieces = new ArrayList<>();
+        for (Piece p : pieces){
+            if(p.getPieceStatus().equals(PieceStatus.INACTIVE)){
+                inactivePieces.add(p);
+            }
+        }
+        return inactivePieces;
+    }
 
     public static void validatePlayers(Player p1, Player p2) throws Exception{
 
@@ -47,6 +55,13 @@ public class Player {
 
     }
 
+    public boolean isWinner(){
+        return isWinner;
+    }
+
+    public String getName(){
+        return name;
+    }
     public PlayerColor getColor() {
         return color;
     }
@@ -54,4 +69,13 @@ public class Player {
     public void addPiece(Piece piece){
         pieces.add(piece);
     }
+
+    public String getColorName(){
+        return color.getColor();
+    }
+
+    public int getPlayerOrder(){
+        return color.getOrder();
+    }
+
 }

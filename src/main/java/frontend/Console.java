@@ -1,11 +1,12 @@
 package frontend;
 
-import dtos.DTOPlayer;
-import dtos.DTOPlayerColor;
+import dtos.*;
 import exceptions.ErrorMessage;
 import exceptions.ExceptionHandler;
 import services.InitializerService;
+import services.StatusService;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Console {
@@ -15,6 +16,7 @@ public class Console {
     public static void main(String[] args) throws Exception {
 
         initializeGame();
+        checkGameStatus();
 
     }
 
@@ -53,7 +55,47 @@ public class Console {
             System.out.println(Text.RESTART_MESSAGE);
             initializeGame();
         }
+    }
 
+    private static void checkGameStatus() throws Exception{
+
+        StatusService statusService = new StatusService();
+
+        DTOGameStatus dtoGameStatus = statusService.getGameStatus();
+
+        if(dtoGameStatus.isCheckMate()){
+            System.out.println(Text.WINNER_TEXT + dtoGameStatus.getWinner());
+            return;
+        }
+
+        DTOPosition positions[][] = dtoGameStatus.getPositions();
+
+        System.out.println("    0     1     2     3     4     5     6     7     8  ");
+        System.out.println(" +-----|-----|-----|-----|-----|-----|-----|-----|-----+");
+        for (int i = 0; i < 9; i++) {
+            System.out.print(""+i+"|");
+            for (int j = 0; j < 9; j++) {
+                String pos = positions[i][j].getPiece();
+                pos = " "+pos;
+                while (pos.length() < 5){
+                    pos=pos+" ";
+                }
+                System.out.print(pos+"|");
+            }
+            System.out.println("");
+            System.out.println(" |-----|-----|-----|-----|-----|-----|-----|-----|-----|");
+        }
+        System.out.println();
+
+        ArrayList<DTOPlayerStatus> dtosPlayerStatus = dtoGameStatus.getPlayers();
+        for(DTOPlayerStatus dtoPlayer : dtosPlayerStatus){
+            System.out.println(dtoPlayer.toString());
+            System.out.println(dtoPlayer.getPiecesOut());
+            System.out.println();
+
+        }
 
     }
+
+
 }

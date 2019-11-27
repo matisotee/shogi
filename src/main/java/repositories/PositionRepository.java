@@ -6,7 +6,7 @@ import model.Settings;
 public class PositionRepository {
 
     private static PositionRepository instance;
-    private Position positions[][] = new Position[Settings.ROWS][Settings.COLUMNS];
+    private static Position positions[][] = new Position[Settings.ROWS][Settings.COLUMNS];
 
     private PositionRepository(){}
 
@@ -21,5 +21,9 @@ public class PositionRepository {
 
     public void saveAllPositions(Position positions[][]){
         this.positions = positions;
+    }
+
+    public Position[][] getPositions(){
+        return positions;
     }
 }

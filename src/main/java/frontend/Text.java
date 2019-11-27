@@ -2,6 +2,8 @@ package frontend;
 
 public class Text {
 
-    public static final String INTRODUCIONG_TEXT= "COMENZANDO JUEGO: POR FAVOR ESCRIBA LOS NOMBRES DE CADA JUGADOR";
-    public static final String PLAYER_CONFIG_TEXT = "Nombre jugador ";
+    public static final String INTRODUCIONG_TEXT= "STARTING GAME: PLEASE, WRITE PLAYERS NAMES";
+    public static final String PLAYER_TEXT = "Player ";
+    public static final String NAME_TEXT = " name ";
+    public static final String RESTART_MESSAGE = "Restarting game...";
 }

@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5181efe9-755b-495d-afac-ccf28e5f3b6b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/Sequence Diagrams/ConfigPlayersSequence.png" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/Sequence Diagrams/ConfigPlayersSequence.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayerColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayerColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagrams/Class Diagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/Class Diagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagrams/Sequence Diagrams/MovePieceSequence.png" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/Sequence Diagrams/MovePieceSequence.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frontend/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontend/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frontend/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontend/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PieceStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PieceStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PieceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/PlayerColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PlayerColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PositionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PositionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PieceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PieceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PlayerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PositionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PositionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/InitializerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/InitializerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/factories/PieceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/factories/PieceFactory.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +60,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

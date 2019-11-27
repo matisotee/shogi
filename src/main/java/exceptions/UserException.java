@@ -13,7 +13,7 @@ public abstract class UserException extends Exception {
 
     public UserException(String detail) {
         super();
-        description = description + ". "+ detail;
+        description = getDefaultDescription() + ". "+ detail;
 
     }
 

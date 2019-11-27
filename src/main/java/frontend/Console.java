@@ -17,6 +17,7 @@ public class Console {
 
         initializeGame();
         checkGameStatus();
+        nextTurn();
 
     }
 
@@ -95,6 +96,16 @@ public class Console {
 
         }
 
+    }
+
+    private static void nextTurn() throws Exception{
+
+
+        StatusService statusService = new StatusService();
+
+        DTOTurn dto = statusService.getNextTurn();
+
+        System.out.println(Text.TURN_TEXT + dto.toString() + Text.TURN_TEXT2);
     }
 
 

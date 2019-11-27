@@ -2,18 +2,18 @@ package exceptions.backendExceptions;
 
 import exceptions.BackendException;
 
-public class NoPlayerException extends BackendException {
+public class NullTurnException extends BackendException {
 
-    public NoPlayerException(){
+    public NullTurnException(){
         super();
     }
 
-    public NoPlayerException(String detail){
+    public NullTurnException(String detail){
         super(detail);
     }
 
     @Override
     protected String getDefaultDescription() {
-        return "Un jugador no fue creado";
+        return "null turn created";
     }
 }

@@ -5,8 +5,9 @@ import model.Settings;
 
 public class PositionRepository {
 
-    private static PositionRepository instance;
     private static Position positions[][] = new Position[Settings.ROWS][Settings.COLUMNS];
+    private static PositionRepository instance;
+
 
     private PositionRepository(){}
 

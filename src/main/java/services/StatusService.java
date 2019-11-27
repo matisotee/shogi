@@ -2,10 +2,13 @@ package services;
 
 import dtos.*;
 import exceptions.backendExceptions.DoubleWinnerException;
+import exceptions.backendExceptions.NullTurnException;
+import exceptions.backendExceptions.SamePlayerException;
 import model.*;
 import repositories.MovementRepository;
 import repositories.PlayerRepository;
 import repositories.PositionRepository;
+import repositories.TurnRepository;
 
 import java.util.ArrayList;
 
@@ -43,7 +46,7 @@ public class StatusService {
 
         for (Player p : players) {
 
-            DTOPlayerStatus dtoPlayerStatus = new DTOPlayerStatus(p.getColorName(),p.getName(),p.getColor().getOrder());
+            DTOPlayerStatus dtoPlayerStatus = new DTOPlayerStatus(p.getColorName(),p.getName(),p.getColor().getDirection());
             ArrayList<Piece> inactivePieces = p.getInactivePieces();
             for(Piece piece : inactivePieces){
                 DTOPieceOut dtoPieceOut = new DTOPieceOut(piece.getId(),piece.getName());
@@ -97,4 +100,50 @@ public class StatusService {
 
         return dtoGameStatus;
     }
+
+    public DTOTurn getNextTurn ()throws Exception{
+
+        TurnRepository turnRepository = TurnRepository.getInstance();
+        Turn lastTurn = turnRepository.getLastTurn();
+
+        PlayerRepository playerRepository = PlayerRepository.getInstance();
+        Player player1 = playerRepository.getPlayer1();
+        Player player2 = playerRepository.getPlayer2();
+
+        if( player1.getColor().equals(player2.getColor()) ){
+            throw new SamePlayerException();
+        }
+
+        Turn nextTurn =null;
+        if(lastTurn == null && player1.getColor().equals(PlayerColor.COLOR_FIRST_PLAYER)){
+            nextTurn = new Turn(player1);
+        }
+
+        if(lastTurn == null && player2.getColor().equals(PlayerColor.COLOR_FIRST_PLAYER)){
+            nextTurn = new Turn(player2);
+        }
+
+        if(lastTurn != null && lastTurn.turnBelongTo(player1)){
+            nextTurn = new Turn(player2);
+        }
+
+        if(lastTurn != null && lastTurn.turnBelongTo(player2)){
+            nextTurn = new Turn(player1);
+        }
+
+        if(nextTurn == null){
+            throw new NullTurnException();
+        }
+
+        turnRepository.addTurn(nextTurn);
+
+        Player nextPlayer = nextTurn.getPlayer();
+
+        DTOTurn dto = new DTOTurn(nextPlayer.getColorName(),nextPlayer.getName(),nextPlayer.getColor().getDirection(),nextTurn.getOrder());
+
+        return dto;
+
+    }
+
+
 }

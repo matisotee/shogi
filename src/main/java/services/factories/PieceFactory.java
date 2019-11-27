@@ -1,6 +1,6 @@
 package services.factories;
 
-import exceptions.backendExceptions.NoPlayerException;
+import exceptions.backendExceptions.NullPlayerException;
 import model.*;
 
 public class PieceFactory {
@@ -44,7 +44,7 @@ public class PieceFactory {
         }else if(initPiecePosition[row][column].getPlayerColor() == null){
             piece = null;
         }else {
-            throw new NoPlayerException();
+            throw new NullPlayerException();
         }
 
         return piece;

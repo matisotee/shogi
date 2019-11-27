@@ -6,13 +6,13 @@ public class DTOPlayerStatus {
 
     private String color;
     private String name;
-    private int order;
+    private String direction;
     private ArrayList<DTOPieceOut> piecesOut = new ArrayList<>();
 
-    public DTOPlayerStatus(String color, String name, int order) {
+    public DTOPlayerStatus(String color, String name,String direction) {
         this.color = color;
         this.name = name;
-        this.order = order;
+        this.direction = direction;
     }
 
     public void addPieceOut(DTOPieceOut dto){
@@ -20,13 +20,12 @@ public class DTOPlayerStatus {
     }
 
     public String getColor() {
-        if(order == 1){
-            color = color + " V";
-        }
-        if(order == 2){
-            color = color + " Λ";
-        }
+
         return color;
+    }
+
+    public String getDirection() {
+        return direction;
     }
 
     public String getName() {
@@ -53,6 +52,6 @@ public class DTOPlayerStatus {
 
     @Override
     public String toString() {
-        return getName() + " ("+getColor()+") pieces to insert:";
+        return getName() + " ("+getColor()+" "+getDirection() +") pieces to insert:";
     }
 }

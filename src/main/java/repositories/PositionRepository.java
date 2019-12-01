@@ -27,4 +27,8 @@ public class PositionRepository {
     public Position[][] getPositions(){
         return positions;
     }
+
+    public Position getPositionById(int row, int column){
+        return positions[row][column];
+    }
 }

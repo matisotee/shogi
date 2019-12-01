@@ -23,4 +23,14 @@ public class MovementRepository {
     public ArrayList<Movement> getAllMovements(){
         return movements;
     }
+
+    public void saveMovement(Movement mov){
+        movements.add(mov);
+    }
+
+    public Movement getLastMovement(){
+
+        int index = movements.size() -1;
+        return movements.get(index);
+    }
 }

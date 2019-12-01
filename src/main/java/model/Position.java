@@ -37,6 +37,10 @@ public class Position {
         return column;
     }
 
+    public void setEmptyStatus(){
+        status = PositionStatus.EMPTY;
+    }
+
     public boolean isFull() throws Exception{
         if(status.equals(PositionStatus.EMPTY)){
             return false;
@@ -45,8 +49,19 @@ public class Position {
         }else{
             throw new PositionStatusUndefinedException();
         }
+    }
 
 
+    public boolean isOccupiedBy(Player player){
+        if(piece == null){
+            return false;
+        }
+
+        if (player.equals(piece.getPlayer())){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public static void checkIfValidPosition(int row, int column) throws Exception{

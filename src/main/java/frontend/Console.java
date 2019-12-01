@@ -3,21 +3,56 @@ package frontend;
 import dtos.*;
 import exceptions.ErrorMessage;
 import exceptions.ExceptionHandler;
+import services.ActionService;
 import services.InitializerService;
 import services.StatusService;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Console {
     //create scanner instance to read from the console
     static Scanner scanner = new Scanner(System.in);
+    static boolean wasCheckMate = false;
 
     public static void main(String[] args) throws Exception {
 
-        initializeGame();
-        checkGameStatus();
-        nextTurn();
+        while (true) {
+            try {
+                initializeGame();
+                break;
+            }catch (Exception e){
+                ExceptionHandler handler = new ExceptionHandler();
+                ErrorMessage msg = handler.handleException(e);
+                System.out.println(msg.getMessage());
+            }
+        }
+
+
+        boolean wasCheckMate = false;
+
+        do {
+            wasCheckMate = checkGameStatus();
+            if(wasCheckMate){
+                break;
+            }
+            nextTurn();
+            while (true) {
+                try {
+                    move();
+                    break;
+                } catch (Exception e) {
+                    ExceptionHandler handler = new ExceptionHandler();
+                    ErrorMessage msg = handler.handleException(e);
+                    System.out.println(msg.getMessage());
+
+                }
+            }
+
+        }while (! wasCheckMate );
+
 
     }
 
@@ -47,26 +82,21 @@ public class Console {
         DTOPlayer dtoPlayer1 = new DTOPlayer(colorPlayer1,namePlayer1);
         DTOPlayer dtoPlayer2 = new DTOPlayer(colorPlayer2,namePlayer2);
 
-        try {
-            initializerService.startGame(dtoPlayer1,dtoPlayer2);
-        }catch (Exception e){
-            ExceptionHandler handler = new ExceptionHandler();
-            ErrorMessage msg = handler.handleException(e);
-            System.out.println(msg);
-            System.out.println(Text.RESTART_MESSAGE);
-            initializeGame();
-        }
+        initializerService.startGame(dtoPlayer1,dtoPlayer2);
+
     }
 
-    private static void checkGameStatus() throws Exception{
+    private static boolean checkGameStatus() throws Exception{
 
         StatusService statusService = new StatusService();
 
         DTOGameStatus dtoGameStatus = statusService.getGameStatus();
 
+        boolean isCheckMate = false;
+
         if(dtoGameStatus.isCheckMate()){
             System.out.println(Text.WINNER_TEXT + dtoGameStatus.getWinner());
-            return;
+            isCheckMate = true;
         }
 
         DTOPosition positions[][] = dtoGameStatus.getPositions();
@@ -95,7 +125,7 @@ public class Console {
             System.out.println();
 
         }
-
+        return isCheckMate;
     }
 
     private static void nextTurn() throws Exception{
@@ -106,7 +136,80 @@ public class Console {
         DTOTurn dto = statusService.getNextTurn();
 
         System.out.println(Text.TURN_TEXT + dto.toString() + Text.TURN_TEXT2);
+
+
     }
+
+    private static void move()throws Exception{
+
+        System.out.println(Text.MOVE_TEXT_FROM);
+
+        int rowFrom = 0;
+        int columnFrom= 0;
+        int rowTo= 0;
+        int columnTo= 0;
+
+
+
+        while (true){
+            try {
+                System.out.print(Text.MOVE_TEXT1);
+                rowFrom = Integer.parseInt(scanner.nextLine());
+                System.out.print(Text.MOVE_TEXT2);
+                columnFrom = Integer.parseInt(scanner.nextLine());
+                break;
+            }catch (NumberFormatException e){
+                System.out.println(Text.INPUT_MISMATCH);
+            }
+        }
+
+        System.out.println(Text.MOVE_TEXT_TO);
+
+        while (true){
+            try {
+                System.out.print(Text.MOVE_TEXT1);
+                rowTo = Integer.parseInt(scanner.nextLine());
+                System.out.print(Text.MOVE_TEXT2);
+                columnTo = Integer.parseInt(scanner.nextLine());
+                break;
+            }catch (NumberFormatException e){
+                System.out.println(Text.INPUT_MISMATCH);
+            }
+        }
+
+
+        ActionService actionService = new ActionService();
+
+        DTOMovementInfo dto = actionService.movePiece(rowFrom,columnFrom,rowTo,columnTo);
+
+        if (dto.isCapture()){
+            System.out.println(Text.CAPTURE_TEXT + dto.getPieceCaptured());
+        }
+
+        if(dto.isCheckMate()){
+            return;
+        }
+
+        if(dto.isCanPromote()){
+            while (true){
+                System.out.println(Text.PROMOTE_TEXT);
+                String decision= scanner.nextLine();
+
+                if(decision.equals("Y") || decision.equals("y")){
+                    actionService.promote(dto.getPieceMovedId());
+                    break;
+                }
+
+                if(decision.equals("N") || decision.equals("n")){
+                    break;
+                }
+
+                System.out.println(Text.INVALID_PROMOTE_DECISION);
+            }
+        }
+    }
+
+
 
 
 }

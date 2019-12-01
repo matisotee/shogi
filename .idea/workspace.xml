@@ -3,18 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="5181efe9-755b-495d-afac-ccf28e5f3b6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOMovementInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOMovementInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayerStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayerStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOTurn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/UserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/backendExceptions/NoPlayerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/backendExceptions/NullPlayerException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOPosition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frontend/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontend/Console.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frontend/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontend/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PieceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/PlayerColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PlayerColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Turn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/MovementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/MovementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PieceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PieceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PositionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PositionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/TurnRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/TurnRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ActionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/StatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/factories/PieceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/factories/PieceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/factories/MoveStrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/factories/MoveStrategyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/MoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/MoveStrategy.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,10 +108,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/model/Piece.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

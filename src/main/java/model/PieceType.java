@@ -4,13 +4,13 @@ public enum PieceType {
     KING("K",false,null),
     PROMOTED_BISHOP("B",false,null),
     PROMOTED_ROOK("R",false,null),
-    GOLD_GENERAL("GG",false,null),
+    GOLD_GENERAL("G",false,null),
     LANCE("L",true,GOLD_GENERAL),
     KNIGHT("KN",true,GOLD_GENERAL),
-    SILVER_GENERAL("SG",false,GOLD_GENERAL),
+    SILVER_GENERAL("S",false,GOLD_GENERAL),
     BISHOP("B",false,PROMOTED_BISHOP),
     ROOK("R",false,PROMOTED_ROOK),
-    PAWN("P",false,GOLD_GENERAL);
+    PAWN("P",true,GOLD_GENERAL);
 
     private String name;
     private boolean rowLimited;

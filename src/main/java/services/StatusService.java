@@ -73,6 +73,7 @@ public class StatusService {
                     dtosPosition[i][j].setPiece(piecePosition.getName());
                     Player piecePlayer = piecePosition.getPlayer();
                     dtosPosition[i][j].setPlayerOrder(piecePlayer.getPlayerOrder());
+                    dtosPosition[i][j].setDirection(piecePlayer.getColor().getDirection());
                 }
             }
         }

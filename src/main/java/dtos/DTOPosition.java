@@ -7,6 +7,7 @@ public class DTOPosition {
     private boolean isFull;
     private String piece;
     private int playerOrder;
+    private String direction;
 
     public DTOPosition(int row, int column) {
         this.row = row;
@@ -42,9 +43,9 @@ public class DTOPosition {
             return "";
         }
         if(playerOrder == 1){
-            return piece+"v";
+            return piece+direction;
         }else if(playerOrder == 2){
-            return piece+"Λ";
+            return piece+direction;
         }else {
             return piece;
         }
@@ -60,5 +61,13 @@ public class DTOPosition {
 
     public void setPlayerOrder(int playerOrder) {
         this.playerOrder = playerOrder;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 }

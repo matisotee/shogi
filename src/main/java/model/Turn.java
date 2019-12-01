@@ -35,6 +35,10 @@ public class Turn {
         return player.getName();
     }
 
+    public void setMovement(Movement movement) {
+        this.movement = movement;
+    }
+
     public boolean turnBelongTo(Player player){
         if(this.player.equals(player)){
             return true;

@@ -11,6 +11,12 @@ public class Movement {
     private PieceType pieceCaptured;
 
 
+    public Movement(Position positionFrom, Position positionTo, PieceType pieceMoved) {
+        this.positionFrom = positionFrom;
+        this.positionTo = positionTo;
+        this.pieceMoved = pieceMoved;
+    }
+
     public Position getPositionFrom() {
         return positionFrom;
     }
@@ -41,5 +47,26 @@ public class Movement {
 
     public String getPlayerName(){
         return turn.getPlayerName();
+    }
+
+    public void setPieceCaptured(PieceType pieceCaptured) {
+        this.pieceCaptured = pieceCaptured;
+        isCapture = true;
+    }
+
+    public PieceType getPieceCaptured() {
+        return pieceCaptured;
+    }
+
+    public boolean isCapture() {
+        return isCapture;
+    }
+
+    public void setPromotion(boolean promotion) {
+        isPromotion = promotion;
+    }
+
+    public void setTurn(Turn turn) {
+        this.turn = turn;
     }
 }

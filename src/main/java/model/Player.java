@@ -59,6 +59,10 @@ public class Player {
         return isWinner;
     }
 
+    public void setWinner(){
+        isWinner = true;
+    }
+
     public String getName(){
         return name;
     }
@@ -68,6 +72,10 @@ public class Player {
 
     public void addPiece(Piece piece){
         pieces.add(piece);
+    }
+
+    public void removePiece(Piece piece){
+        pieces.remove(piece);
     }
 
     public String getColorName(){

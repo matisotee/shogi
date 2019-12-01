@@ -37,9 +37,9 @@ public class DTOPlayerStatus {
         for(DTOPieceOut dto : piecesOut){
 
             if (listOfPieces == null){
-                listOfPieces = dto.getPiece() +" ("+dto.getId()+")";
+                listOfPieces = dto.getPiece() +" (Id: "+dto.getId()+")";
             }else {
-                listOfPieces = ", "+dto.getPiece() +" ("+dto.getId()+")";
+                listOfPieces = listOfPieces+ ", "+dto.getPiece() +" ( Id: "+dto.getId()+")";
             }
 
 

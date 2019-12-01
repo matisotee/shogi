@@ -1,5 +1,7 @@
 Matias Sotelo shogi:
 
+Class diagram and sequence diagrams attached in folder "Diagrams".
+
 -Features Included:
 	+Configure players names
 	+Update game status (include board status and players status)

@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5181efe9-755b-495d-afac-ccf28e5f3b6b" name="Default Changelist" comment="">
+    <list default="true" id="3bc5eedb-6124-422f-9c61-6d8144732076" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOMovementInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOMovementInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayerStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOPlayerStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/DTOPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/DTOPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frontend/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontend/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frontend/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontend/Text.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PieceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/PlayerColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PlayerColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Turn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/MovementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/MovementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PieceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PieceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/PositionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/PositionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ActionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/StatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/factories/MoveStrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/factories/MoveStrategyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/MoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/MoveStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/InitializerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/InitializerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/GoldGeneralMoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/GoldGeneralMoveStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/SilverGeneralMoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/SilverGeneralMoveStrategy.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +44,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -76,17 +62,63 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Console" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="frontend.Console" />
+  <component name="RunManager" selected="JUnit.PieceMovementTest">
+    <configuration name="PieceMovementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shogi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PieceMovementTest.promotedBishopValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shogi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="METHOD_NAME" value="promotedBishopValidateCorrectDestinationTest(java.lang.String,int,int,int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PieceMovementTest.promotedRookValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shogi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="METHOD_NAME" value="promotedRookValidateCorrectDestinationTest(java.lang.String,int,int,int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PieceMovementTest.promotedRookValidateDestinationWrongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shogi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="METHOD_NAME" value="promotedRookValidateDestinationWrongTest(java.lang.String,int,int,int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PieceMovementTest.silverGeneralValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shogi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="METHOD_NAME" value="silverGeneralValidateCorrectDestinationTest(java.lang.String,int,int,int,int)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Console" />
+        <item itemvalue="JUnit.PieceMovementTest" />
+        <item itemvalue="JUnit.PieceMovementTest.promotedRookValidateCorrectDestinationTest" />
+        <item itemvalue="JUnit.PieceMovementTest.promotedRookValidateDestinationWrongTest" />
+        <item itemvalue="JUnit.PieceMovementTest.promotedBishopValidateCorrectDestinationTest" />
+        <item itemvalue="JUnit.PieceMovementTest.silverGeneralValidateCorrectDestinationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -120,9 +152,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/Piece.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/KnightMoveStrategy.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/PromotedRookMoveStrategy.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

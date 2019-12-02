@@ -13,23 +13,23 @@ public class Player {
     private PlayerColor color;
     private ArrayList<Piece> pieces = new ArrayList<Piece>();
 
-    public Player(DTOPlayer dto) throws PlayerColorException {
+    public Player(String color, String name) throws PlayerColorException {
 
         PlayerColor firstPlayer = PlayerColor.COLOR_FIRST_PLAYER;
         PlayerColor secondPlayer = PlayerColor.COLOR_SECOND_PLAYER;
 
-        if( ( ! dto.getColor().equals( firstPlayer.getColor()) ) && (! dto.getColor().equals( secondPlayer.getColor()) ) ){
-            throw new PlayerColorException(dto.getColor());
+        if( ( ! color.equals( firstPlayer.getColor()) ) && (! color.equals( secondPlayer.getColor()) ) ){
+            throw new PlayerColorException(color);
         }
 
-        if( dto.getColor().equals( firstPlayer.getColor()) ){
-            this.name = dto.getName();
-            color = firstPlayer;
+        if( color.equals( firstPlayer.getColor()) ){
+            this.name = name;
+            this.color = firstPlayer;
         }
 
-        if( dto.getColor().equals( secondPlayer.getColor()) ){
-            this.name = dto.getName();
-            color = secondPlayer;
+        if( color.equals( secondPlayer.getColor()) ){
+            this.name = name;
+            this.color = secondPlayer;
         }
     }
 

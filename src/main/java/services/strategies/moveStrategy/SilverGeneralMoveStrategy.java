@@ -16,11 +16,11 @@ public class SilverGeneralMoveStrategy implements MoveStrategy {
         boolean straightCondition = false;
 
         if(piece.getPlayer().getColor().getOrientation().equals(PlayerOrientation.DOWN)){
-            straightCondition = (rowTo == rowFrom-1) && (columnTo == columnFrom);
+            straightCondition = (rowTo == rowFrom+1) && (columnTo == columnFrom);
         }
 
         if(piece.getPlayer().getColor().getOrientation().equals(PlayerOrientation.UP)){
-            straightCondition = (rowTo == rowFrom+1) && (columnTo == columnFrom);
+            straightCondition = (rowTo == rowFrom-1) && (columnTo == columnFrom);
         }
 
         if((! straightCondition) && (! diagonalCondition)){

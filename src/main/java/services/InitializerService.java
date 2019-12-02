@@ -30,8 +30,8 @@ public class InitializerService {
     public void startGame(DTOPlayer dtoPlayer1, DTOPlayer dtoPlayer2) throws Exception{
 
         //Players creation
-        Player player1 = new Player(dtoPlayer1);
-        Player player2 = new Player(dtoPlayer2);
+        Player player1 = new Player(dtoPlayer1.getColor(),dtoPlayer1.getName());
+        Player player2 = new Player(dtoPlayer2.getColor(),dtoPlayer2.getName());
 
         PlayerRepository playerRepository = PlayerRepository.getInstance();
         playerRepository.savePlayer1(player1);

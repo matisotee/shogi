@@ -17,11 +17,11 @@ public class GoldGeneralMoveStrategy implements MoveStrategy {
         boolean diagonalCondition = false;
 
         if(piece.getPlayer().getColor().getOrientation().equals(PlayerOrientation.DOWN)){
-            diagonalCondition = (rowTo == rowFrom-1) && (Math.abs(columnTo-columnFrom)==1);
+            diagonalCondition = (rowTo == rowFrom+1) && (Math.abs(columnTo-columnFrom)==1);
         }
 
         if(piece.getPlayer().getColor().getOrientation().equals(PlayerOrientation.UP)){
-            diagonalCondition = (rowTo == rowFrom+1) && (Math.abs(columnTo-columnFrom)==1);
+            diagonalCondition = (rowTo == rowFrom-1) && (Math.abs(columnTo-columnFrom)==1);
         }
 
         if((! straightCondition1)&&(! straightCondition2)&&(! diagonalCondition)){

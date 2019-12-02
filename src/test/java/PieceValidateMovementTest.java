@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import services.factories.MoveStrategyFactory;
 import services.strategies.moveStrategy.MoveStrategy;
 
-public class PieceMovementTest {
+public class PieceValidateMovementTest {
 
     public static MoveStrategyFactory factory;
 

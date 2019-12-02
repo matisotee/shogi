@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc5eedb-6124-422f-9c61-6d8144732076" name="Default Changelist" comment="">
+    <list default="true" id="803d038c-b95d-413c-9a26-ee92290fa4c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/InitializerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/InitializerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/GoldGeneralMoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/GoldGeneralMoveStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/SilverGeneralMoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/strategies/moveStrategy/SilverGeneralMoveStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PieceMovementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PieceValidateMovementTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,51 +58,48 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PieceMovementTest">
-    <configuration name="PieceMovementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Console" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="frontend.Console" />
+      <module name="shogi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PieceValidateMovementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shogi" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="MAIN_CLASS_NAME" value="PieceValidateMovementTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PieceMovementTest.promotedBishopValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PieceValidateMovementTest.promotedBishopValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shogi" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="MAIN_CLASS_NAME" value="PieceValidateMovementTest" />
       <option name="METHOD_NAME" value="promotedBishopValidateCorrectDestinationTest(java.lang.String,int,int,int,int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PieceMovementTest.promotedRookValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PieceValidateMovementTest.promotedRookValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shogi" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="MAIN_CLASS_NAME" value="PieceValidateMovementTest" />
       <option name="METHOD_NAME" value="promotedRookValidateCorrectDestinationTest(java.lang.String,int,int,int,int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PieceMovementTest.promotedRookValidateDestinationWrongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PieceValidateMovementTest.promotedRookValidateDestinationWrongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shogi" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
+      <option name="MAIN_CLASS_NAME" value="PieceValidateMovementTest" />
       <option name="METHOD_NAME" value="promotedRookValidateDestinationWrongTest(java.lang.String,int,int,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PieceMovementTest.silverGeneralValidateCorrectDestinationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shogi" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PieceMovementTest" />
-      <option name="METHOD_NAME" value="silverGeneralValidateCorrectDestinationTest(java.lang.String,int,int,int,int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PieceMovementTest" />
-        <item itemvalue="JUnit.PieceMovementTest.promotedRookValidateCorrectDestinationTest" />
-        <item itemvalue="JUnit.PieceMovementTest.promotedRookValidateDestinationWrongTest" />
-        <item itemvalue="JUnit.PieceMovementTest.promotedBishopValidateCorrectDestinationTest" />
-        <item itemvalue="JUnit.PieceMovementTest.silverGeneralValidateCorrectDestinationTest" />
+        <item itemvalue="JUnit.PieceValidateMovementTest" />
+        <item itemvalue="Application.Console" />
+        <item itemvalue="JUnit.PieceValidateMovementTest.promotedRookValidateCorrectDestinationTest" />
+        <item itemvalue="JUnit.PieceValidateMovementTest.promotedRookValidateDestinationWrongTest" />
+        <item itemvalue="JUnit.PieceValidateMovementTest.promotedBishopValidateCorrectDestinationTest" />
       </list>
     </recent_temporary>
   </component>

@@ -1,6 +1,7 @@
 Matias Sotelo shogi:
 
 Class diagram and sequence diagrams attached in folder "Diagrams".
+Unit test included in:  src/test
 
 -Features Included:
 	+Configure players names
